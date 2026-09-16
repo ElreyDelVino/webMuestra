@@ -122,9 +122,33 @@
 
         <footer id="reservas">
             <h2>RESERVAS -> TELEFONO: 910568457</h2>
-            <button class="btn-reserva">RESERVA AHORA</button>
+            <button id="boton-reserva" class="btn-reserva">RESERVA AHORA</button>
         </footer>
     </main>
+
+    <div id="ventana-reserva" class="modal-oculto">
+        <div class="contenido-modal">
+
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+
+            <h2>Reserva tu mesa</h2>
+
+            <form id="formulario-reserva">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" placeholder="Ej: Maria Garcia" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios" required>
+
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" id="telefono" placeholder="Ej: 600123456" pattern="[0-9]{9}" title="Introduce 9 números sin espacios" required>
+
+                <label for="hora">Hora de la reserva: </label>
+                <input type="time" id="hora" min="08:00" max="23:00" step="900" required>
+
+                <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
