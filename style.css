@@ -170,3 +170,43 @@ footer{
     color: #d35400; 
     margin-left: 20px; 
 }
+
+/*adaptacion para movil */
+
+@media (max-width: 768px){
+    .fila-superior, .fila-informacion{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fila-superior div, .fila-informacion div{
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .fila-informacion div:last-child{
+        border-bottom: none;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    .plato{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .plato-precio{
+        margin-left: 0;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
