@@ -12,6 +12,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f1ea;
     color: #333;
+    background-image:url('https://www.transparenttextures.com/patterns/scribble-light.png');
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -22,6 +26,23 @@ header{
     color: white;
     padding: 20px;
 
+}
+
+header p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    margin: 5px 0;
+}
+
+.fila-informacion{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    margin: 5px 0;
 }
 
 .fila-superior, .fila-informacion{
@@ -146,6 +167,18 @@ footer{
     align-items: center; 
     border-bottom: 1px dashed #ccc; 
     padding: 15px 0; 
+    gap: 15px;
+}
+
+.plato-img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.plato-info{
+    flex: 1;
 }
 
 
@@ -171,7 +204,15 @@ footer{
     font-size: 20px;
     font-weight: bold;
     color: #d35400; 
-    margin-left: 20px; 
+     
+}
+
+.alergenos{
+    display: block;
+    font-size: 12px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 .modal-oculto{
@@ -234,6 +275,20 @@ footer{
     text-transform: uppercase;
 }
 
+.btn-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 2000;
+    transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover{
+    transform: scale(1.1);
+}
+
 /*adaptacion para movil */
 
 @media (max-width: 768px){
@@ -272,4 +327,23 @@ footer{
         text-align: center;
         gap: 20px;
     }
+}
+
+#reservas {
+    /* El truco del degradado (linear-gradient) oscurece la foto de fondo para que el texto se lea bien */
+    background-image: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)), url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hace un efecto muy chulo de que el fondo se queda quieto al hacer scroll */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 5px solid #d35400; /* Una línea naranja para separarlo de la carta */
+}
+
+/* Y para que el título destaque más con ese fondo */
+#reservas h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,1);
 }
